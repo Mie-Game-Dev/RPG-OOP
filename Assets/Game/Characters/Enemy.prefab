@@ -7,6 +7,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1809343860, guid: d50e8de3e7363fb40b818748b4554fbc, type: 3}
+      propertyPath: m_Speed
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1809343860, guid: d50e8de3e7363fb40b818748b4554fbc, type: 3}
+      propertyPath: m_Acceleration
+      value: 30
+      objectReference: {fileID: 0}
     - target: {fileID: 3702432360022315321, guid: d50e8de3e7363fb40b818748b4554fbc, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -21,15 +29,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5739442442194868396, guid: d50e8de3e7363fb40b818748b4554fbc, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -1.4173464
       objectReference: {fileID: 0}
     - target: {fileID: 5739442442194868396, guid: d50e8de3e7363fb40b818748b4554fbc, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.33431435
       objectReference: {fileID: 0}
     - target: {fileID: 5739442442194868396, guid: d50e8de3e7363fb40b818748b4554fbc, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 3.0562987
       objectReference: {fileID: 0}
     - target: {fileID: 5739442442194868396, guid: d50e8de3e7363fb40b818748b4554fbc, type: 3}
       propertyPath: m_LocalRotation.w
@@ -71,6 +79,33 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 3748204751196563863, guid: d50e8de3e7363fb40b818748b4554fbc, type: 3}
   m_PrefabInstance: {fileID: 4880862254799407680}
   m_PrefabAsset: {fileID: 0}
+--- !u!136 &72942949409667021
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8626647287842399191}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Height: 2
+  m_Direction: 1
+  m_Center: {x: 0, y: 1, z: 0}
+--- !u!114 &2360336681224881182
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8626647287842399191}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 760a5bac6b9c71a4db36e064f97ed814, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  chaseDistance: 10
 --- !u!114 &2536447947284269838
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -95,21 +130,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81e3f8a0cdcae12418fe01a8937a4f8a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 20
---- !u!136 &72942949409667021
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8626647287842399191}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
+  healthPoints: 50
 --- !u!1001 &7484012012619040548
 PrefabInstance:
   m_ObjectHideFlags: 0

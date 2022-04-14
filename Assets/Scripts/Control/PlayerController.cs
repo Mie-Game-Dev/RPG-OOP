@@ -7,7 +7,12 @@ namespace RPG.Control
 {
     public class PlayerController : MonoBehaviour
     {
-        [SerializeField] Mover mover;
+        Mover mover;
+
+        private void Start()
+        {
+            mover = GetComponent<Mover>();
+        }
 
         void Update()
         {
@@ -21,12 +26,17 @@ namespace RPG.Control
             foreach (RaycastHit hit in hits)
             {
                 CombatTarget target = hit.collider.GetComponent<CombatTarget>();
-
                 if (target == null) continue;
+
+                GameObject targetGameObject = target.gameObject;
+                if(!GetComponent<Fighter>().CanAttack(targetGameObject))
+                {
+                    continue;
+                }
 
                 if (Input.GetMouseButtonDown(0))
                 {
-                    GetComponent<Fighter>().Attack(target);
+                    GetComponent<Fighter>().Attack(targetGameObject);
                 }
                 return true;
             }
